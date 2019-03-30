@@ -15,6 +15,8 @@ class App extends Component {
         <div id = "appContainer">
         
             <Header/>
+                
+                <Homepage/>
         
         
         

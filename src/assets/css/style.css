@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
     font-size: 18px;
     background: url('../images/timbo.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -40,16 +40,15 @@ header{
 
 nav{
     float: right;
-    width: 300px;
-    margin: 5px 0px 0px 20px;
+    width: 340px;
+    margin: 5px 0px 0px 40px;
     padding: 0px;
-    top: 50%; right: 35px;
 }
 
 nav ul li{
     list-style-type: none;
     display: inline-block;
-    margin-right: 45px; 
+    margin-right: 60px; 
 }
 
 nav ul li a{
@@ -71,4 +70,25 @@ nav ul li a:hover{
     margin: 0px;
 }
 /*HEADER.JS END*/
+
+/*PAGES STYLE*/
+
+#container{
+    margin: 50px 0px 0px 20px;
+    padding: 20px;
+    width: 550px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#home h1{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.startButton{
+    margin: 50px 0px 20px 200px;
+}
+
+
+
 
