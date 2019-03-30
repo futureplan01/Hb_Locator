@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
-import './App.css';
+
+//COMPONENTS
+import Header from './components/headerComponent/header';
+import Homepage from 
+'./components/pages/homePage';
+
+//CSS SHEET
+import './assets/css/style.css';
 
 class App extends Component {
   render() {
     return (
-    <div>    
-     <h1>Header</h1>
-    <h2>Some other header</h2>
-    </div>    
+        
+        <div id = "appContainer">
+        
+            <Header/>
+        
+        
+        
+        </div>
+        
     );
   }
 }
