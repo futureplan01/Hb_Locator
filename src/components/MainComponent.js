@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from './components/headerComponent/header';
+import Header from './headerComponent/header';
 import Homepage from 
-'./components/pages/homePage';
+'./pages/homePage';
 export default  class MainComponent extends Component {
     render() {
       return (
