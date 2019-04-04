@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
+
 //COMPONENTS
 import Header from './components/headerComponent/header';
 import Homepage from 
 './components/pages/homePage';
 
+
 //CSS SHEET
 import './assets/css/style.css';
+import MapContainer from './components/MapContainer';
 
 class App extends Component {
+
+  
+
   render() {
     return (
         
@@ -18,6 +24,7 @@ class App extends Component {
                 
                 <Homepage/>
         
+                <MapContainer />
         
         
         </div>
