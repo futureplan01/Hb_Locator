@@ -5,15 +5,16 @@
 body{
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     background: url('../images/timbo.jpg') no-repeat center center fixed;
     background-size: cover;
+    width: 100%;
 }
 
 /*APP.JS*/
 
 #appContainer{
-    width: 100%; 
+    width: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -29,27 +30,30 @@ header{
     padding: 10px 0px 10px 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-#text{
+#headerText{
     color: white;
 }
+
 .logo{
     float: left;
     font-weight: bolder;
     margin: 0px 0px 0px 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 nav{
     float: right;
-    width: 340px;
-    margin: 5px 0px 0px 40px;
-    padding: 0px;
+    position: relative;
+    width: 300px;
+    margin: 2px 20px 0px 0px;
+    padding: 0;
 }
 
 nav ul li{
     list-style-type: none;
     display: inline-block;
-    margin-right: 60px; 
+    margin-right: 55px; 
+    font-size: 15px;
 }
 
 nav ul li a{
@@ -67,6 +71,7 @@ nav ul li a:hover{
     padding-bottom: 5px;
     border-bottom: 1.5px solid skyblue;
 }
+
 .lastLink{
     margin: 0px;
 }
@@ -74,21 +79,284 @@ nav ul li a:hover{
 
 /*PAGES STYLE*/
 
-#container{
-    margin: 50px 0px 0px 20px;
-    padding: 20px;
-    width: 550px;
+/*HOMEPAGE.JS*/
+
+#welcomeContainer{
+    margin: 50px 0px 0px 50px;
+    display: inline-block;
+    padding: 30px 20px;
+    position: relative;
+    width: 500px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#home h1{
+#welcomeContainer h1{
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-.startButton{
-    margin: 50px 0px 20px 200px;
+.startButton p{
+    margin: 50px 0px 0px 175px;
 }
+ 
+/*HOMEPAGE.JS END*/
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-1024.jpg') no-repeat center center fixed;
+            background-size: cover;
+            width: 1024px;
+            height: 1366px;
+            
+    }
+    
+    #welcomeContainer{
+        width: 40%;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 2.2vw;
+    }
+
+    .startButton p{
+        margin: 10% 0% 0% 33%;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape){
+    
+    #welcomeContainer{
+        width: 40%;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 2.2vw;
+    }
+
+    .startButton p{
+        margin: 10% 0% 0% 33%;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+ 
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-768.jpg') no-repeat center center;
+            background-size: cover;
+            width: 768px;
+            height: 1024px;
+    }
+    
+    #welcomeContainer{
+        width: 40%;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 2.2vw;
+    }
+    
+    .startButton p{
+        margin: 10% 0% 0% 33%;
+    }
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-414.jpg') no-repeat center center;
+            background-size: cover;
+            width: 415px;
+            height: 736px;
+    }
+    
+    #welcomeContainer{
+        margin: 10% 0 0 10%;
+        width: 25%;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-weight: bolder;
+        margin: 0px 0px 0px 105px;
+        font-size: 20px;
+    }
+    
+    nav{
+        margin: 10px 20px 0px 30px;
+        width: 355px;
+    }
+    
+    .startButton p{
+        margin: 20% 0% 0% 20%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 411px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-411.jpg') no-repeat center center;
+            background-size: cover;
+            width: 411px;
+            height: 823px;
+    }
+    
+    #welcomeContainer{
+        margin: 10% 0 0 10%;
+        width: 25%;
+        font-size: 8px;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-weight: bolder;
+        margin: 0px 0px 0px 105px;
+        font-size: 20px;
+    }
+    
+    nav{
+        margin: 10px 20px 0px 30px;
+        width: 355px;
+    }
+    
+    .startButton p{
+        margin: 20% 0% 0% 20%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 375px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-375.jpg') no-repeat center center;
+            background-size: cover;
+            width: 375px;
+            height: 812px;
+    }
+    
+    #welcomeContainer{
+        margin: 10% 0 0 10%;
+        width: 25%;
+        font-size: 8px;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-weight: bolder;
+        margin: 0px 0px 0px 75px;
+        font-size: 20px;
+    }
+    
+    nav{
+        margin: 10px 20px 0px 40px;
+        width: 340px;
+    }
+    
+    .startButton p{
+        margin: 20% 0% 0% 20%;
+    }
+}
+
+@media screen and (max-width: 360px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-320.jpg') no-repeat center center;
+            background-size: cover;
+            width: 360px;
+            height: 640px;
+    }
+    
+    #welcomeContainer{
+        margin: 10% 0 0 10%;
+        width: 25%;
+        font-size: 8px;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-weight: bolder;
+        margin: 0px 0px 0px 75px;
+        font-size: 20px;
+    }
+    
+    nav{
+        margin: 10px 20px 0px 40px;
+        width: 330px;
+    }
+    
+    .startButton p{
+        margin: 20% 0% 0% 20%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 320px) and (orientation: portrait){
+    
+    body{
+            font-size: 1.8vw;
+            background: url('../images/Timbo-320.jpg') no-repeat center center;
+            background-size: cover;
+            width: 320px;
+            height: 568px;
+    }
+    
+    #welcomeContainer{
+        margin: 10% 0 0 10%;
+        width: 27%;
+        font-size: 8px;
+    }
+    
+    #welcomeContainer h1{
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-weight: bolder;
+        margin: 0px 0px 0px 60px;
+        font-size: 20px;
+    }
+    
+    nav{
+        margin: 10px 20px 0px 30px;
+        width: 305px;
+    }
+    
+    .startButton p{
+        margin: 20% 0% 0% 10%;
+    }
+}
+
+
+
+
 
 
 

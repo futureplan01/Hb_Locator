@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class Homepage extends Component {
   render() {
     return (
-        <div id = "container">
         
-            <div id = "home">
+            <div id = "welcomeContainer">
         
                 <h1>Welcome To The Handball Court Locator</h1>
 
@@ -13,13 +12,11 @@ class Homepage extends Component {
 
                 <div className = "startButton">
 
-                START BUTTON
+                <p>START BUTTON</p>
 
-                </div>
+                </div> 
         
             </div>
-        
-        </div>
     );
   }
 }
