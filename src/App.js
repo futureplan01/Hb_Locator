@@ -10,11 +10,15 @@ import "./assets/css/style.css";
 class App extends Component {
   render() {
     return (
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route exact path="/map" component={Main} />
-        <Route exact path="/anything_else" component={Main} />
-      </Switch>
+        <div id = "appContainer">
+        
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/map" component={Main} />
+            <Route exact path="/anything_else" component={Main} />
+          </Switch>
+        
+        </div>
     );
   }
 }
