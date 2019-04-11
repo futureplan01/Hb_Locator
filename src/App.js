@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //COMPONENTS
-import Main from "./components/MainComponent";
+import Main from "./components/mainComponent/main";
 
 //CSS SHEET
 import "./assets/css/style.css";

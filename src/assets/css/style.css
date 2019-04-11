@@ -1,64 +1,50 @@
 *{
     margin: 0px auto 0px auto;
+    box-sizing: border-box;
 }
 
 body{
+    background: linear-gradient(to bottom right, #83a4d4, #acb6e5) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 16px;
-    background: url('../images/timbo.jpg') no-repeat center center fixed;
-    background-size: cover;
-    width: 100%;
-}
-
-/*APP.JS*/
-
-#appContainer{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+    overflow-x: hidden;
 }
 
 
 /*HEADER.JS*/
 
 header{
-    display: inline-block;
-    position: relative;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-flex-direction: row;
     width: 100%;
+    background-color: black;
+    padding: 15px 0px;
     margin: 0px;
-    padding: 10px 0px 10px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-#headerText{
-    color: white;
 }
 
-.logo{
-    float: left;
-    font-weight: bolder;
-    margin: 0px 0px 0px 20px;
-    font-size: 20px;
-}
-
-nav{
-    float: right;
-    position: relative;
+.logo p{
     width: 300px;
-    margin: 2px 20px 0px 0px;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
-nav ul li{
+nav ul{
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    width: 400px;
     list-style-type: none;
-    display: inline-block;
-    margin-right: 55px; 
-    font-size: 15px;
+    margin: 3px 0px 0px 200px;
 }
 
 nav ul li a{
-    font-weight: bold;
     color: white;
+    font-size: 15px;
     text-decoration: none;
     transition-property: all;
     transition-duration: .4s;
@@ -72,287 +58,178 @@ nav ul li a:hover{
     border-bottom: 1.5px solid skyblue;
 }
 
-.lastLink{
-    margin: 0px;
-}
-/*HEADER.JS END*/
-
-/*PAGES STYLE*/
-
 /*HOMEPAGE.JS*/
 
-#welcomeContainer{
-    margin: 50px 0px 0px 50px;
-    display: inline-block;
-    padding: 30px 20px;
+#homeContainer{
+    display: -webkit-flex;
+    -webkit-justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
     position: relative;
-    width: 500px;
+}
+
+#welcome{
+    display: -webkit-flex;
+    -webkit-justify-content: flex-start;
+    -webkit-flex-direction: column;
+    background: url('../images/timbo.jpg') no-repeat center center scroll;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 33%;
+    position: relative;
+}
+
+#startBox{
+    width: 50%;
+    padding: 20px;
+    margin: 80px 0px 0px 35px;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-#welcomeContainer h1{
+#startBox h2{
     margin-bottom: 20px;
-    font-size: 25px;
 }
 
-.startButton p{
-    margin: 50px 0px 0px 175px;
-}
- 
-/*HOMEPAGE.JS END*/
-
-/*MEDIA QUERIES*/
-
-@media screen and (max-width: 1024px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-1024.jpg') no-repeat center center fixed;
-            background-size: cover;
-            width: 1024px;
-            height: 1366px;
-            
-    }
-    
-    #welcomeContainer{
-        width: 40%;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 2.2vw;
-    }
-
-    .startButton p{
-        margin: 10% 0% 0% 33%;
-    }
-    
+#startBox p{
+    line-height: 23px;
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape){
-    
-    #welcomeContainer{
-        width: 40%;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 2.2vw;
-    }
-
-    .startButton p{
-        margin: 10% 0% 0% 33%;
-    }
-    
+.startButton{
+    margin-top: 20px;
 }
 
-
-@media screen and (max-width: 768px) and (orientation: portrait){
- 
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-768.jpg') no-repeat center center;
-            background-size: cover;
-            width: 768px;
-            height: 1024px;
-    }
-    
-    #welcomeContainer{
-        width: 40%;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 2.2vw;
-    }
-    
-    .startButton p{
-        margin: 10% 0% 0% 33%;
-    }
+#explore{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
-@media screen and (max-width: 414px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-414.jpg') no-repeat center center;
-            background-size: cover;
-            width: 415px;
-            height: 736px;
-    }
-    
-    #welcomeContainer{
-        margin: 10% 0 0 10%;
-        width: 25%;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 10px;
-    }
-    
-    .logo{
-        font-weight: bolder;
-        margin: 0px 0px 0px 105px;
-        font-size: 20px;
-    }
-    
-    nav{
-        margin: 10px 20px 0px 30px;
-        width: 355px;
-    }
-    
-    .startButton p{
-        margin: 20% 0% 0% 20%;
-    }
-    
-    
+#explore h1{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
 }
 
-@media screen and (max-width: 411px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-411.jpg') no-repeat center center;
-            background-size: cover;
-            width: 411px;
-            height: 823px;
-    }
-    
-    #welcomeContainer{
-        margin: 10% 0 0 10%;
-        width: 25%;
-        font-size: 8px;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 10px;
-    }
-    
-    .logo{
-        font-weight: bolder;
-        margin: 0px 0px 0px 105px;
-        font-size: 20px;
-    }
-    
-    nav{
-        margin: 10px 20px 0px 30px;
-        width: 355px;
-    }
-    
-    .startButton p{
-        margin: 20% 0% 0% 20%;
-    }
-    
-    
+#slider-container{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
-@media screen and (max-width: 375px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-375.jpg') no-repeat center center;
-            background-size: cover;
-            width: 375px;
-            height: 812px;
-    }
-    
-    #welcomeContainer{
-        margin: 10% 0 0 10%;
-        width: 25%;
-        font-size: 8px;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 10px;
-    }
-    
-    .logo{
-        font-weight: bolder;
-        margin: 0px 0px 0px 75px;
-        font-size: 20px;
-    }
-    
-    nav{
-        margin: 10px 20px 0px 40px;
-        width: 340px;
-    }
-    
-    .startButton p{
-        margin: 20% 0% 0% 20%;
-    }
+#slider-container .slider{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
 }
 
-@media screen and (max-width: 360px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-320.jpg') no-repeat center center;
-            background-size: cover;
-            width: 360px;
-            height: 640px;
-    }
-    
-    #welcomeContainer{
-        margin: 10% 0 0 10%;
-        width: 25%;
-        font-size: 8px;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 10px;
-    }
-    
-    .logo{
-        font-weight: bolder;
-        margin: 0px 0px 0px 75px;
-        font-size: 20px;
-    }
-    
-    nav{
-        margin: 10px 20px 0px 40px;
-        width: 330px;
-    }
-    
-    .startButton p{
-        margin: 20% 0% 0% 20%;
-    }
+#slider-container .slider > *{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    animation: slide 15s infinite;
+}
+
+#slider-container .slide{
+    width: 100%;
+}
+
+#slider-container .slide:nth-child(1){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/brooklynPiers-Brooklyn.jpg') no-repeat center center scroll;
+    background-size: cover;
+    left: 0%;
+    animation-delay: -1s;
+}
+
+#slider-container .slide:nth-child(2){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/park-statenIsland.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 2s;
+}
+
+#slider-container .slide:nth-child(3){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/regoPark-Queens.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 5s;
+}
+
+#slider-container .slide:nth-child(4){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/vanCourt-Bronx.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 8s
+}
+
+#slider-container .slide:nth-child(5){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/westFourth-manhattan.jpg') no-repeat center center scroll;
+    background-size: cover;
+    left: 0%;
+    animation-delay: 11s;
+}
+
+#slider-container .slide p{
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    width: 100%;
+    margin-top: 260px;
+}
+
+#slider-container .slide .brooklynFont{
+    font-family: 'Bangers', cursive;
+}
+
+#slider-container .slide .statenFont{
+    font-family: 'Cuprum', sans-serif;
+}
+
+#slider-container .slide .queensFont{
+    font-family: 'Kaushan Script', cursive;
+}
+
+#slider-container .slide .bronxFont{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#slider-container .slide .manFont{
+    font-family: 'Monoton', cursive;
+}
+
+@-webkit-keyframes slide{
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25% {left: 0%;}
+    30% {left: -100%; width: 100%;}
+    30.0001% {left: -100%; width: 0%;}
+    100%{left: 100%; width: 0%;}
 }
 
 
 
-
-@media screen and (max-width: 320px) and (orientation: portrait){
-    
-    body{
-            font-size: 1.8vw;
-            background: url('../images/Timbo-320.jpg') no-repeat center center;
-            background-size: cover;
-            width: 320px;
-            height: 568px;
-    }
-    
-    #welcomeContainer{
-        margin: 10% 0 0 10%;
-        width: 27%;
-        font-size: 8px;
-    }
-    
-    #welcomeContainer h1{
-        font-size: 10px;
-    }
-    
-    .logo{
-        font-weight: bolder;
-        margin: 0px 0px 0px 60px;
-        font-size: 20px;
-    }
-    
-    nav{
-        margin: 10px 20px 0px 30px;
-        width: 305px;
-    }
-    
-    .startButton p{
-        margin: 20% 0% 0% 10%;
-    }
-}
 
 
 

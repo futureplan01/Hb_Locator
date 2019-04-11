@@ -5,19 +5,16 @@ class Header extends Component {
   render() {
     return (
             <header>
-                <div id = "headerText">
-                    <div className = "logo">
-                        Handball Court Locator
-                    </div>
-
-                    <nav>
-                        <ul>
-                            <li><Link to = "/">Home</Link></li>
-                            <li><Link to = "/Map">Map</Link></li>
-                            <li className = "lastLink"><Link to = "/anything_else">Yo Mamma</Link></li>
-                        </ul>
-                    </nav>
+                <div className = "logo">
+                    <p>HANDBALL COURT LOCATOR</p>
                 </div>
+                <nav>
+                    <ul>
+                        <li><Link to = "/">HOME</Link></li>
+                        <li><Link to = "/Map">MAP</Link></li>
+                        <li className = "lastLink"><Link to = "/anything_else">MORE</Link></li>
+                    </ul>
+                </nav>
             </header>
     );
   }
