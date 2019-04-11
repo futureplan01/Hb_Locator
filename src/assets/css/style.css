@@ -178,7 +178,7 @@ nav ul li a:hover{
       rgba(0, 0, 0, 0.5)
     ),url('../images/vanCourt-Bronx.jpg') no-repeat center center scroll;
     background-size: cover;
-    animation-delay: 8s
+    animation-delay: 8s;
 }
 
 #slider-container .slide:nth-child(5){
