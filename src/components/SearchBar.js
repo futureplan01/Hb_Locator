@@ -48,7 +48,9 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5c-P1VVmT9SgvX65j4n9pv58PgV4KV7A&libraries=places" />
+        <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5c-P1VVmT9SgvX65j4n9pv58PgV4KV7A&libraries=places" 
+        onLoad = {this.handleScriptLoad}
+        />
         <input
           ref={this.autocompleteInput}
           id="autocomplete"
