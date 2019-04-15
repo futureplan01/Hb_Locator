@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 //COMPONENTS
 import Main from "./components/mainComponent/main";
-
+import SearchBar from "./components/SearchBar";
 import MapContainer from "./components/MapContainer";
 
 //CSS SHEET
@@ -16,6 +16,7 @@ class App extends Component {
         <Route exact path="/" component={Main} />
         <Route exact path="/map" component={MapContainer} />
         <Route exact path="/anything_else" component={Main} />
+        <Route exact path="/search" component={SearchBar} />
       </Switch>
     );
   }
