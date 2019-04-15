@@ -3,22 +3,18 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-        <header>
-            <div id = "text">
+            <header>
                 <div className = "logo">
-                    Handball Court Locator
+                    <p>HANDBALL COURT LOCATOR</p>
                 </div>
-
                 <nav>
                     <ul>
-                        <li><a href = "#">Home</a></li>
-                        <li><a href = "#">Parks</a></li>
-                        <li className = "lastLink"><a href = "#">More</a></li>
+                        <li><Link to = "/">HOME</Link></li>
+                        <li><Link to = "/Map">MAP</Link></li>
+                        <li className = "lastLink"><Link to = "/anything_else">MORE</Link></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
-        
+            </header>
     );
   }
 }

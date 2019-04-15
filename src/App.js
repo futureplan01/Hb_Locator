@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
 //COMPONENTS
-import Main from "./components/MainComponent";
+import Main from "./components/mainComponent/main";
+
 import MapContainer from "./components/MapContainer";
 
 //CSS SHEET

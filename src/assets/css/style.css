@@ -1,60 +1,50 @@
 *{
     margin: 0px auto 0px auto;
+    box-sizing: border-box;
 }
 
 body{
+    background: linear-gradient(to bottom right, #83a4d4, #acb6e5) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 18px;
-    background: url('../images/timbo.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/*APP.JS*/
-
-#appContainer{
-    width: 100%; 
-    margin: 0px;
-    padding: 0px;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 
 /*HEADER.JS*/
 
 header{
-    display: inline-block;
-    position: relative;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-flex-direction: row;
     width: 100%;
+    background-color: black;
+    padding: 15px 0px;
     margin: 0px;
-    padding: 10px 0px 10px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-#text{
-    color: white;
-}
-.logo{
-    float: left;
-    font-weight: bolder;
-    margin: 0px 0px 0px 20px;
-    font-size: 25px;
 }
 
-nav{
-    float: right;
-    width: 340px;
-    margin: 5px 0px 0px 40px;
+.logo p{
+    width: 300px;
+    margin: 0px;
     padding: 0px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
-nav ul li{
+nav ul{
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    width: 400px;
     list-style-type: none;
-    display: inline-block;
-    margin-right: 60px; 
+    margin: 3px 0px 0px 200px;
 }
 
 nav ul li a{
-    font-weight: bold;
     color: white;
+    font-size: 15px;
     text-decoration: none;
     transition-property: all;
     transition-duration: .4s;
@@ -67,28 +57,183 @@ nav ul li a:hover{
     padding-bottom: 5px;
     border-bottom: 1.5px solid skyblue;
 }
-.lastLink{
-    margin: 0px;
+
+/*HOMEPAGE.JS*/
+
+#homeContainer{
+    display: -webkit-flex;
+    -webkit-justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
 }
-/*HEADER.JS END*/
 
-/*PAGES STYLE*/
+#welcome{
+    display: -webkit-flex;
+    -webkit-justify-content: flex-start;
+    -webkit-flex-direction: column;
+    background: url('../images/timbo.jpg') no-repeat center center scroll;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 33%;
+    position: relative;
+}
 
-#container{
-    margin: 50px 0px 0px 20px;
+#startBox{
+    width: 50%;
     padding: 20px;
-    width: 550px;
+    margin: 80px 0px 0px 35px;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-#home h1{
+#startBox h2{
     margin-bottom: 20px;
-    font-size: 30px;
+}
+
+#startBox p{
+    line-height: 23px;
 }
 
 .startButton{
-    margin: 50px 0px 20px 200px;
+    margin-top: 20px;
 }
+
+#explore{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#explore h1{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+#slider-container{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#slider-container .slider{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#slider-container .slider > *{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    animation: slide 15s infinite;
+}
+
+#slider-container .slide{
+    width: 100%;
+}
+
+#slider-container .slide:nth-child(1){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/brooklynPiers-Brooklyn.jpg') no-repeat center center scroll;
+    background-size: cover;
+    left: 0%;
+    animation-delay: -1s;
+}
+
+#slider-container .slide:nth-child(2){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/park-statenIsland.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 2s;
+}
+
+#slider-container .slide:nth-child(3){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/regoPark-Queens.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 5s;
+}
+
+#slider-container .slide:nth-child(4){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/vanCourt-Bronx.jpg') no-repeat center center scroll;
+    background-size: cover;
+    animation-delay: 8s;
+}
+
+#slider-container .slide:nth-child(5){
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('../images/westFourth-manhattan.jpg') no-repeat center center scroll;
+    background-size: cover;
+    left: 0%;
+    animation-delay: 11s;
+}
+
+#slider-container .slide p{
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    width: 100%;
+    margin-top: 220px;
+}
+
+#slider-container .slide .brooklynFont{
+    font-family: 'Bangers', cursive;
+}
+
+#slider-container .slide .statenFont{
+    font-family: 'Cuprum', sans-serif;
+}
+
+#slider-container .slide .queensFont{
+    font-family: 'Kaushan Script', cursive;
+}
+
+#slider-container .slide .bronxFont{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#slider-container .slide .manFont{
+    font-family: 'Monoton', cursive;
+}
+
+@-webkit-keyframes slide{
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25% {left: 0%;}
+    30% {left: -100%; width: 100%;}
+    30.0001% {left: -100%; width: 0%;}
+    100%{left: 100%; width: 0%;}
+}
+
+
+
+
+
+
+
 
 
 
