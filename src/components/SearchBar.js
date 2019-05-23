@@ -17,10 +17,9 @@ class SearchBar extends React.Component {
   handleScriptLoad() {
     // Declare Options For Autocomplete
     var options = {
-      types: ["(cities)"]
-    }; // To disable any eslint 'google not defined' errors
+      type: ['address']
+    };
 
-    // Initialize Google Autocomplete
     /*global google*/ this.autocomplete = new google.maps.places.Autocomplete(
       document.getElementById("autocomplete"),
       options
@@ -34,6 +33,10 @@ class SearchBar extends React.Component {
     // Extract City From Address Object
     let addressObject = this.autocomplete.getPlace();
     let address = addressObject.address_components;
+    console.log(addressObject.geometry.location.lat());
+    console.log(addressObject.geometry.location.lng());
+
+   
 
     // Check if address is valid
     if (address) {

@@ -8,14 +8,6 @@ import SearchBar from './SearchBar';
 import React, { Component } from "react";
 import Handball from "../Handball.json";
 
-const MapWithAMarker = withScriptjs(
-  withGoogleMap(props => (
-    <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }}>
-      <Marker position={{ lat: 40.7362, lng: -73.8161 }} />
-    </GoogleMap>
-  ))
-);
-
 const MapWithHBCourts = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }}>
@@ -23,8 +15,6 @@ const MapWithHBCourts = withScriptjs(
       let x = Number(hb.lat);
       let y = Number(hb.lon);
       if(hb.lat != null && hb.lon != null){
-        console.log(x); // Number 
-        console.log(y); // Number 
        return(<Marker key = {i} position= {{lat: x, lng: y}}/>)
       }
     })}
