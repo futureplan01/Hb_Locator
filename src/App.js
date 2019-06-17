@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 
 //COMPONENTS
 import Main from "./components/mainComponent/main";
-import SearchBar from "./components/SearchBar";
 import MapContainer from "./components/MapContainer";
 import Handball from "./components/HandballData";
 

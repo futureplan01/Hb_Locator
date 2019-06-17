@@ -4,11 +4,11 @@ import {
   GoogleMap,
   Marker
 } from "react-google-maps";
-import SearchBar from './SearchBar'; 
 import React, { Component } from "react";
 import Handball from "../Handball.json";
 import Autocomplete from "react-google-autocomplete";
 
+let lat, lng;
 const MapWithHBCourts = withScriptjs(
   withGoogleMap(props => (
     
@@ -23,8 +23,13 @@ const MapWithHBCourts = withScriptjs(
 
         onPlaceSelected = {(place)=>{
           console.log(place);
+          lat = place.geometry.location.lat();
+          lng = place.geometry.location.lng();
+          console.log(`lat: ${lat} and lng: ${lng}`);
         }}
-        types = {['address']}
+        
+        types={[]}
+
         componentRestrictions={{country: "us"}}
       />
     {Handball.map((hb,i)=>{
@@ -40,6 +45,7 @@ const MapWithHBCourts = withScriptjs(
 );
 
 class MapContainer extends Component {
+
   render() {
     return (
       <div>
