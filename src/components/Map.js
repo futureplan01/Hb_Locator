@@ -6,6 +6,7 @@ import {
   } from "react-google-maps";
   import React, { Component } from "react";
   import Handball from "../Handball.json";
+  import Autocomplete from "react-google-autocomplete";
   
 
 
@@ -23,7 +24,20 @@ const MapWithHBCourts = withScriptjs(
          return(<Marker key = {i} position= {{lat: x, lng: y}}/>)
         }
       })}
+      <Autocomplete
+        style ={{
+          width: '100%',
+          height: '40px',
+          textalign: 'center',
+        }}
 
+        onPlaceSelected = {(place)=>{
+          console.log(place);
+        }}
+        types = {['address']}
+        componentRestrictions={{country: "us"}}
+
+      />
       </GoogleMap>
     ))
 );
