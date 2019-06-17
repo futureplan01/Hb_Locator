@@ -4,7 +4,7 @@ import {
   GoogleMap,
   Marker
 } from "react-google-maps";
-import SearchBar from './SearchBar'; 
+
 import React, { Component } from "react";
 import Handball from "../Handball.json";
 import Autocomplete from "react-google-autocomplete";
