@@ -8,45 +8,53 @@ import React, { Component } from "react";
 import Handball from "../Handball.json";
 import Autocomplete from "react-google-autocomplete";
 
-let lat, lng;
-const MapWithHBCourts = withScriptjs(
-  withGoogleMap(props => (
-    
-    <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }}>
-      <Autocomplete
-        style ={{
-          width: '60%',
-          height: '40px',
-          margin: '20%',
-          textalign: 'center',
-        }}
+/**
+ * MAKE SURE I UNDERSTAND NPM --SAVE VS __DEV VS WHATEVER
+ */
 
-        onPlaceSelected = {(place)=>{
-          console.log(place);
-          lat = place.geometry.location.lat();
-          lng = place.geometry.location.lng();
-          console.log(`lat: ${lat} and lng: ${lng}`);
-        }}
-        
-        types={[]}
 
-        componentRestrictions={{country: "us"}}
-      />
-    {Handball.map((hb,i)=>{
-      let x = Number(hb.lat);
-      let y = Number(hb.lon);
-      if(hb.lat != null && hb.lon != null){
-       return(<Marker key = {i} position= {{lat: x, lng: y}}/>)
-      }
-    })}
-
-    </GoogleMap>
-  ))
-);
 
 class MapContainer extends Component {
 
+  constructor (props){
+    super(props);
+    this.state={lat:'',lng:''};
+  }
+
   render() {
+
+    const MapWithHBCourts = withScriptjs(
+      withGoogleMap(props => (
+        
+        <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: this.state.lat || 40.7362, lng: this.state.lng || -73.8161  }}>
+          <Autocomplete
+            style ={{
+              width: '60%',
+              height: '40px',
+              margin: '20%',
+              textalign: 'center',
+            }}
+           
+            onPlaceSelected = {(place)=>{
+              console.log(place);
+              this.setState({lat: place.geometry.location.lat(), lng: place.geometry.location.lng()});
+            }}
+            
+            types={[]}
+    
+            componentRestrictions={{country: "us"}}
+          />
+        {Handball.map((hb,i)=>{
+          let x = Number(hb.lat);
+          let y = Number(hb.lon);
+          if(hb.lat != null && hb.lon != null){
+           return(<Marker key = {i} position= {{lat: x, lng: y}}/>)
+          }
+        })}
+        
+        </GoogleMap>
+      ))
+    );
     return (
       <div>
         <MapWithHBCourts
