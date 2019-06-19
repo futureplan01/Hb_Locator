@@ -48,7 +48,7 @@ class MapContainer extends Component {
           let x = Number(hb.lat);
           let y = Number(hb.lon);
           if(hb.lat != null && hb.lon != null){
-           return(<Marker key = {i} position= {{lat: x, lng: y}}/>)
+           return(<Marker onClick = {()=>console.log(`lat: ${hb.lat}, lng: ${hb.lon}`)} key = {i} position= {{lat: x, lng: y}}/>)
           }
         })}
         
