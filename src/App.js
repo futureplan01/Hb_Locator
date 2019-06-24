@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-//COMPONENTS
-import Main from "./components/mainComponent/main";
-import MapContainer from "./components/MapContainer";
+//COMPONENTS 
+import Main from "./components/main";
+import MapContainer from "./components/MapComponents/MapContainer";
 import Handball from "./components/HandballData";
 
 //CSS SHEET
@@ -15,7 +15,6 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/map" component={MapContainer} />
-        <Route exact path="/anything_else" component={Main} />
         <Route exact path="/hb" component={Handball}/>
       </Switch>
     );

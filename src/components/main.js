@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from '../headerComponent/header';
-import Homepage from '../pages/homePage';
+import Header from './PageComponents/header';
+import Homepage from './PageComponents/HomePage';
 
 class Main extends Component {
     render() {

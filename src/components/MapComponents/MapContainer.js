@@ -2,17 +2,13 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
+  Marker,
+  DirectionsRenderer,
 } from "react-google-maps";
 import React, { Component } from "react";
-import Handball from "../Handball.json";
+import Handball from "../../Handball.json";
 import Autocomplete from "react-google-autocomplete";
-
-/**
- * MAKE SURE I UNDERSTAND NPM --SAVE VS __DEV VS WHATEVER
- */
-
-
+import Button from '../ExtraComponents/Button';
 
 class MapContainer extends Component {
 
@@ -23,7 +19,7 @@ class MapContainer extends Component {
 
   render() {
 
-    const MapWithHBCourts = withScriptjs(
+    const MapWithHBCourts = withScriptjs( 
       withGoogleMap(props => (
         
         <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: this.state.lat || 40.7362, lng: this.state.lng || -73.8161  }}>
@@ -65,6 +61,7 @@ class MapContainer extends Component {
           containerElement={<div style={{ height: `1000px` }} />}
           mapElement={<div style={{ height: `100%`, margin: '10%' }} />}
         />
+        <Button/>
       </div>
     );
   }
