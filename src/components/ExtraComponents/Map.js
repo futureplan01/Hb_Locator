@@ -3,7 +3,6 @@ import React from "react";
 import Handball from "../../Handball.json";
 import Autocomplete from "react-google-autocomplete";
 const { compose, withState,withHandlers, withProps, lifecycle } = require("recompose");
-
 const {
   withScriptjs,
   withGoogleMap,
@@ -15,7 +14,11 @@ const {
 const MapWithADirectionsRenderer =  compose(
   withState('position','setPosition',{ lat: 40.7362, lng: -73.8161 }),
   withHandlers({
-    changePosition: ({setPosition}) => () => setPosition()
+    changePosition: ({setPosition}) => (newLat,newLng) => setPosition((position)=>{
+      position.lat = newLat;
+      position.lng = newLng;
+      return position;
+    })
   }),
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyD5c-P1VVmT9SgvX65j4n9pv58PgV4KV7A&libraries=geometry,drawing,places",

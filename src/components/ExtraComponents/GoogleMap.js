@@ -11,10 +11,10 @@ import {
   import Autocomplete from "react-google-autocomplete";
   
  function GoogleMaps (){
-    const {setPosition, lat,lng} = this.props;
-   return  <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: this.state.lat || 40.7362, lng: this.state.lng || -73.8161  }}>
+    const {setPosition, directions,changePosition} = this.props;
+   return  <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: setPosition.lat || 40.7362, lng: setPosition.lng || -73.8161  }}>
           <DirectionsRenderer
-              directions = {this.state.directions}
+              directions = {directions}
           />
           
           <Autocomplete
@@ -27,12 +27,9 @@ import {
            
             onPlaceSelected = {(place)=>{
               console.log(place);
-              this.props.setLatLng( )
-              this.setState({lat: place.geometry.location.lat(), lng: place.geometry.location.lng()});
+              changePosition(place.geometry.location.lat(), place.geometry.location.lng());
             }}
-            
             types={[]}
-    
             componentRestrictions={{country: "us"}}
           />
         {Handball.map((hb,i)=>{

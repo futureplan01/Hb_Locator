@@ -8,10 +8,9 @@ import {
 import React, { Component } from "react";
 import Handball from "../../Handball.json";
 import Autocomplete from "react-google-autocomplete";
-import Button from '../ExtraComponents/Button';
+import Button from '../ExtraComponents/ClickerHOC';
 
 class MapContainer extends Component {
-
   constructor (props){
     super(props);
     this.state={lat:'',lng:''};
