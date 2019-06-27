@@ -1,22 +1,18 @@
 /*global google*/
 import {
-    withScriptjs,
-    withGoogleMap,
     GoogleMap,
     Marker,
-    DirectionsRenderer,
   } from "react-google-maps";
-  import React from "react";
+  import React, {Component} from "react";
   import Handball from "../../Handball.json";
   import Autocomplete from "react-google-autocomplete";
-  
- function GoogleMaps (){
-    const {setPosition, directions,changePosition} = this.props;
-   return  <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: setPosition.lat || 40.7362, lng: setPosition.lng || -73.8161  }}>
-          <DirectionsRenderer
-              directions = {directions}
-          />
-          
+
+ class GoogleMaps extends Component{
+    render(){
+        console.log(this.props);
+        const {position, updatePosition} = this.props;
+        return(
+        <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: position.lat || 40.7362, lng: position.lng || -73.8161  }}>
           <Autocomplete
             style ={{
               width: '60%',
@@ -27,7 +23,7 @@ import {
            
             onPlaceSelected = {(place)=>{
               console.log(place);
-              changePosition(place.geometry.location.lat(), place.geometry.location.lng());
+              updatePosition(place.geometry.location.lat(), place.geometry.location.lng());
             }}
             types={[]}
             componentRestrictions={{country: "us"}}
@@ -41,6 +37,7 @@ import {
         })}
         
         </GoogleMap>
+        )} 
  }
   export default GoogleMaps;
   

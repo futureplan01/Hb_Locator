@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 //COMPONENTS 
 import Main from "./components/main";
 import MapContainer from "./components/MapComponents/MapContainer";
-import Handball from "./components/HandballData";
+import Handball from "./components/ExtraComponents/RecomposeMap";
 
 //CSS SHEET
 import "./assets/css/style.css";
@@ -15,7 +15,7 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/map" component={MapContainer} />
-        <Route exact path="/hb" component={Handball}/>
+        <Route exact path="/NewMap" component={Handball} />
       </Switch>
     );
   }
