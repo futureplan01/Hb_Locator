@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 class Button extends Component {
+    
 
     render(){
-        const {name,count,increment,withTest,test} = this.props;
-        withTest();
-        console.log(test);
+        let x = 5;
+        const {name,count,increment,updateValue,test} = this.props;
         return(
-        <button onClick = {increment} > 
-           {name} I've Been Clicked {count} Times
+        <button onClick = {()=> updateValue(x)} > 
+           {name} I've Been Clicked {test} Times
         </button>)
     }
 }

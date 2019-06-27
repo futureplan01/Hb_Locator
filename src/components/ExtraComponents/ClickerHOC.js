@@ -1,5 +1,5 @@
 import Button from './Button'
-import {compose, withState, withHandlers, withProps} from 'recompose';
+import {compose, withState, withHandlers,withStateHandlers, withProps} from 'recompose';
 
 // Oh defaulted here... 
 export default compose(
@@ -9,10 +9,16 @@ export default compose(
         increment: ({setCounter}) => () => setCounter((x)=>{
             return x+1;
         }),
-        withTest: ({setTest}) => () => setTest((test)=>{
-            console.log(test);
-        })
     }),
+    withStateHandlers(
+        ({ initialValue = 0 }) => ({
+            test: initialValue,
+          }),{
+            updateValue: ({test}) => (value)=> ({
+                test: value,
+            })
+          }
+    ),
     withProps({
         name: 'JJ is the best',
     }),
