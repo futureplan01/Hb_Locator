@@ -5,7 +5,7 @@ class Button extends Component {
 
     render(){
         let x = 5;
-        const {name,count,increment,updateValue,test} = this.props;
+        const {name,updateValue,test} = this.props;
         return(
         <button onClick = {()=> updateValue(x)} > 
            {name} I've Been Clicked {test} Times

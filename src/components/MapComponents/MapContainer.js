@@ -3,7 +3,7 @@ import {
   withGoogleMap,
   GoogleMap,
   Marker,
-  DirectionsRenderer,
+
 } from "react-google-maps";
 import React, { Component } from "react";
 import Handball from "../../Handball.json";

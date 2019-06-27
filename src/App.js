@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 //COMPONENTS 
 import Main from "./components/main";
 import MapContainer from "./components/MapComponents/MapContainer";
-import Handball from "./components/ExtraComponents/RecomposeMap";
+import Handball from "./components/MapComponents/RecomposeMap";
 
 //CSS SHEET
 import "./assets/css/style.css";
