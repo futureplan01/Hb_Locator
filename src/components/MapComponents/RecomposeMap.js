@@ -11,11 +11,19 @@ const {
 export default compose(
   withStateHandlers(
     ({}) => ({
-        position: { lat: 40.7362, lng: -73.8161 },
+        position: { lat: 40.7358, lng: -73.8144 },
+        startAddress: {lat: 40.7362, lng: -73.8161},
+        directions : null, 
       }),{
         updatePosition: ({position}) => (newLat,newLng)=> ({
             position: {lat: newLat, lng: newLng},
-        })
+        }),
+        updateAddress: ({startAddress}) => (newLat,newLng)=> ({
+          startAddress: {lat: newLat, lng: newLng},
+        }),
+        updateDirections: ({directions}) => (newDirections)=> ({
+          directions: newDirections,
+        }),
       }
   ),
   withProps({
@@ -26,22 +34,4 @@ export default compose(
   }),
   withScriptjs,
   withGoogleMap,
-  lifecycle({
-    componentDidMount() {
-      const DirectionsService = new google.maps.DirectionsService();
-      DirectionsService.route({
-        origin: new google.maps.LatLng(41.8507300, -87.6512600),
-        destination: new google.maps.LatLng(41.8525800, -87.6514100),
-        travelMode: google.maps.TravelMode.DRIVING,
-      }, (result, status) => {
-        if (status === google.maps.DirectionsStatus.OK) {
-          this.setState({
-            directions: result,
-          });
-        } else {
-          console.error(`error fetching directions ${result}`);
-        }
-      });
-    }
-  })
 )(GoogleMap)
