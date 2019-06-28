@@ -8,7 +8,7 @@ import {
 import React, { Component } from "react";
 import Handball from "../../Handball.json";
 import Autocomplete from "react-google-autocomplete";
-import Button from '../ExtraComponents/ClickerHOC';
+import Button from '../ExperimentalComponents/ClickerHOC';
 
 class MapContainer extends Component {
   constructor (props){

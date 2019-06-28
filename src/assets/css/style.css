@@ -13,6 +13,11 @@ body{
     overflow-x: hidden;
 }
 
+/*Google Map*/
+#searchBar{
+    margin-left: 5%;
+}
+
 
 /*HEADER.JS*/
 

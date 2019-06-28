@@ -12,12 +12,13 @@ import {
         console.log(this.props);
         const {position, updatePosition} = this.props;
         return(
-        <GoogleMap defaultZoom={16} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: position.lat || 40.7362, lng: position.lng || -73.8161  }}>
-          <Autocomplete
+        <div>
+        <GoogleMap defaultZoom={15} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: position.lat || 40.7362, lng: position.lng || -73.8161  }}>
+          <Autocomplete id ='searchBar'
             style ={{
-              width: '60%',
+              position: 'relative',
+              width: '90%',
               height: '40px',
-              margin: '20%',
               textalign: 'center',
             }}
            
@@ -37,6 +38,7 @@ import {
         })}
         
         </GoogleMap>
+        </div>
         )} 
  }
   export default GoogleMaps;
