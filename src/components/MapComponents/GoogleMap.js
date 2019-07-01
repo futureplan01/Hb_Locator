@@ -27,13 +27,13 @@ import {
        });
     }
     render(){
+        console.log(`${process.env.REACT_APP_API_KEY}`);
+
         const {position, updatePosition,updateAddress,directions} = this.props;
         return(
         <div>
-        <GoogleMap defaultZoom={15} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: position.lat || 40.7362, lng: position.lng || -73.8161  }}>
           <Autocomplete id ='searchBar'
             style ={{
-              position: 'relative',
               width: '90%',
               height: '40px',
               textalign: 'center',
@@ -46,6 +46,8 @@ import {
             types={[]}
             componentRestrictions={{country: "us"}}
           />
+
+        <GoogleMap defaultZoom={15} defaultCenter={{ lat: 40.7362, lng: -73.8161 }} center= {{lat: position.lat || 40.7362, lng: position.lng || -73.8161  }}>
         {Handball.map((hb,i)=>{
           let x = Number(hb.lat);
           let y = Number(hb.lon);
